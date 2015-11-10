@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Simple Map</title>
-    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <title>Egg Map</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+
+    <script src="http://cooper-union-maps-proxy.herokuapp.com/js/draw.js"></script>
+
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
@@ -36,13 +40,18 @@
         };
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
+          $(document).ready(function(){
             var place = [{
-                position: new google.maps.LatLng(42.650185, -73.758264),
-                map:map,
-                title: "EGG"
+                "title": "EGG",
+                "map": new google.maps.LatLng(42.650185, -73.758264),
+                "link": "https://en.wikipedia.org/wiki/Egg_(food)",
+                "html":"<img src=http://authoritynutrition.com/wp-content/uploads/2013/07/chicken-and-egg-smaller.jpg/>",
             }];
-            new google.maps.Marker(place[0]);
+          draw("map", mapOptions, place);
 
+        });
+
+  new google.maps.Marker(place[0]);
 
       }
 
