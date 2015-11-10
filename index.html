@@ -2,6 +2,7 @@
 <html>
   <head>
     <title>Simple Map</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
     <meta charset="utf-8">
     <style>
@@ -13,11 +14,20 @@
         left:400px;
         top:100px;
       }
+      #welcome{
+        font-family: 'Pacifico', cursive;
+        font-size:20px;
+        color:red;
+        text-decoration:overline;
+        position:absolute;
+        left:100px;
+        top:200px;
+      }
     </style>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
     <script>
 
-  
+
       var map;
 
 
@@ -43,5 +53,6 @@
   </head>
   <body>
     <div id="map-canvas"></div>
+    <div id="welcome">Welcome to Albany</div>
   </body>
 </html>
