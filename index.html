@@ -29,24 +29,24 @@
 
 
       var map;
-
-
       var initialize = function() {
-
         var mapOptions = {
           zoom: 14,
           center: new google.maps.LatLng(42.6454139,-73.7487153) //albany
         };
-
-
         var map = new google.maps.Map(document.getElementById('map-canvas'),
             mapOptions);
+            var place = [{
+                position: new google.maps.LatLng(42.650185, -73.758264),
+                map:map,
+                title: "EGG"
+            }];
+            new google.maps.Marker(place[0]);
+
 
       }
 
-
       google.maps.event.addDomListener(window, 'load', initialize);
-
 
 
     </script>
